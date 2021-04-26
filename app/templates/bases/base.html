@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="diegoosvaldo - Personal Website">
+  <meta name="author" content="Diego Osvaldo">
+  <link rel="icon" type="image/png" href="{% static 'app/img/favicon.png' %}" sizes="64x64">
+  
+  <title>{% block title %}Diego Osvaldo • Backend Developer{% endblock title %}</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'app/css/jquery.pagepiling.min.css' %}">
+  <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+
+  {% block extra_css %}{% endblock %}
+
+</head>
+<body>
+
+	<!-- Loader -->
+	<div class="loader">
+		<div class="spinner"><div class="double-bounce1"></div>
+		<div class="double-bounce2"></div></div>
+	</div>
+
+	<!-- Click capture -->
+	<div class="click-capture"></div>
+
+	<!-- Navbar -->
+	{% include 'includes/navbar.html' %}
+
+	<div id="pagepiling">
+		<!-- Content -->
+		{% block content %}{% endblock content %}
+	</div>
+
+	<!-- Scrollbar -->
+  <div class="progress-nav">
+    <ul class="navbar-nav">
+      <li data-menuanchor="home" class="active"></li>
+      <li data-menuanchor="about"></li>
+      <li data-menuanchor="experience"></li>
+      <li data-menuanchor="skills"></li>
+      <li data-menuanchor="contact"></li>
+    </ul>
+  </div>
+
+	<!-- Optional JavaScript -->
+  <script src="{% static 'app/js/jquery-1.12.4.min.js' %}"></script>
+  <script src="{% static 'app/js/popper.min.js' %}" ></script>
+  <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src="{% static 'app/js/jquery.validate.min.js' %}"></script>
+  <script src="{% static 'app/js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'app/js/jquery.pagepiling.min.js' %}"></script>
+  <script src="{% static 'app/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'app/js/interface.js' %}"></script>
+	{% block extra_js %}{% endblock %}
+
+</body>
+</html>
