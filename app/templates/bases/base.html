@@ -2,16 +2,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="diegoosvaldo - Personal Website">
-  <meta name="author" content="Diego Osvaldo">
+  <!-- Regular data -->
+  <meta charset="utf-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <link rel="icon" type="image/png" href="{% static 'app/img/favicon.png' %}" sizes="64x64">
-  
-  <title>{% block title %}Diego Osvaldo • Backend Developer{% endblock title %}</title>
+
+  <!-- Description -->
+  <meta name="author" content="Diego Osvaldo"/>
+  <meta name="description" content="Freelance, Backend Developer, Passionate GIS Developer"/>
+  <meta name="keywords"  content="diego, osvaldo, diego osvaldo, diego cruz, portfolio, backend, frontend, full stack, gis, geo, web, ux, ui, design, branding, experience, product, manager, freelance, interface, remote, developer"/>
+  <meta name="Resource-type" content="Document"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph data -->    
+  <meta property="og:site_name" content="Diego Osvaldo"/>
+  <meta property="og:title" content="Diego Osvaldo | Backend Developer" />
+  <meta property="og:description" content="Freelance, Backend Developer, Passionate GIS Developer"/>
+  <meta property="og:image" content="{% static 'app/img/bg/me.jpg'%}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://diegoosvaldo.me" />
+
+  <!-- Title -->
+  <title>{% block title %}Diego Osvaldo | Backend Developer & Passionate GIS Developer{% endblock title %}</title>
+
+  <!-- Twitter -->  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@diegocruztorrez">
+  <meta name="twitter:creator" content="@diegocruztorrez">
+  <meta name="twitter:title" content="Diego Osvaldo">
+  <meta name="twitter:description" content="Freelance, Backend Developer, Passionate GIS Developer">
+  <meta name="twitter:url" content="https://diegoosvaldo.me">
+  <meta name="twitter:image" content="{% static 'app/img/bg/me.jpg'%}">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{% static 'app/css/jquery.pagepiling.min.css' %}">
+  <link rel="stylesheet" href="{% static 'app/css/jquery.pagepiling.css' %}">
   <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
 
   {% block extra_css %}{% endblock %}
@@ -37,7 +61,7 @@
 	</div>
 
 	<!-- Scrollbar -->
-  <div class="progress-nav">
+  <!-- <div class="progress-nav">
     <ul class="navbar-nav">
       <li data-menuanchor="home" class="active"></li>
       <li data-menuanchor="about"></li>
@@ -45,7 +69,7 @@
       <li data-menuanchor="skills"></li>
       <li data-menuanchor="contact"></li>
     </ul>
-  </div>
+  </div> -->
 
 	<!-- Optional JavaScript -->
   <script src="{% static 'app/js/jquery-1.12.4.min.js' %}"></script>
@@ -54,7 +78,7 @@
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
   <script src="{% static 'app/js/jquery.validate.min.js' %}"></script>
   <script src="{% static 'app/js/jquery.magnific-popup.min.js' %}"></script>
-  <script src="{% static 'app/js/jquery.pagepiling.min.js' %}"></script>
+  <script src="{% static 'app/js/jquery.pagepiling.js' %}"></script>
   <script src="{% static 'app/js/owl.carousel.min.js' %}"></script>
   <script src="{% static 'app/js/interface.js' %}"></script>
 	{% block extra_js %}{% endblock %}
