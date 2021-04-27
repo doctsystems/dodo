@@ -44,8 +44,8 @@
 
 /* 1.1 General */
 
-/*@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 @import url('bootstrap.min.css');
@@ -362,7 +362,7 @@ label.error{
 
 
 ion-icon{
-  color:#23a592;
+  color:#D4F21B;
   font-size: 3.8rem;
   --ionicon-stroke-width: 17px;
 
@@ -648,6 +648,31 @@ ion-icon{
   float: right;
   position: relative;
   z-index: 10;
+}
+
+.contact-icons {
+  float: left;
+  margin-right: 1rem;
+  display: block;
+  font-size: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.copy-icons {
+  float: right;
+  margin-left: 0.2rem;
+  display: block;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.skills-icons {
+  float: left;
+  margin-left: 2rem;
+  display: block;
+  /*font-size: 1.5rem;*/
+  /*transition: all 0.3s ease;*/
+  /*width: 3em;*/
 }
 
 .social-icons li{
@@ -1434,17 +1459,17 @@ h1 + .line{
 
 
 .row-partners{
-  margin:0 -2rem;
+  margin: 0 -2rem;
 }
 
 .col-partner{
-  padding:0 1rem;
-  margin:1rem 0;
+  padding: 0 1rem;
+  margin: 1rem 0;
   text-align: center;
 }
 
 .col-partner img{
-  max-width: 100%;
+  width: 4em;
   transition: all 0.3s ease;
 }
 
@@ -1471,10 +1496,7 @@ h1 + .line{
 
 /* 3.9 Contact */
 
-
-
 .message{
   margin-bottom: 2rem;
   display: none;
 }
-

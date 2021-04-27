@@ -1,6 +1,5 @@
 ﻿( function($) {
   'use strict';
-  	
 
   	/* Window Load */
 	$(window).on('load',function(){
@@ -8,7 +7,10 @@
         $('.line').addClass('active');
 	});
 
-
+    $('#arrow').click(function () {
+        $.fn.pagepiling.moveSectionDown();
+    });
+    
     /* Navbar scroll*/
     $('.navbar-nav ul li a').on('click', function() {
         var target = $(this.hash);
@@ -21,16 +23,12 @@
         }
     });
 
-
-
-    
-
     /* Full page scroll*/
     if ($('#pagepiling').length > 0){
 
         $('#pagepiling').pagepiling({
             scrollingSpeed: 280,
-            navigation:false,
+            // navigation:false,
             menu: '.navbar-nav',
             anchors: ['home', 'about', 'experience', 'skills', 'contact'],
             afterRender: function(anchorLink, index){ 
@@ -43,8 +41,6 @@
                 NavbarColor();
             }
         });
-
-  
 
         function NavbarColor(){
          if ($('.pp-section.active').hasClass('navbar-is-white')){
@@ -64,7 +60,6 @@
         }
     }
 
-
     /* Navbar toggler */
     $('.toggler').on('click',function(){
     	$('body').addClass('menu-is-open');
@@ -73,7 +68,6 @@
     $('.close, .click-capture').on('click',function(){
     	$('body').removeClass('menu-is-open');
     });
-
 
     /* Navbar mobile */
     $('.navbar-nav-mobile li a').on('click', function(){
@@ -91,14 +85,11 @@
         fixedContentPos: false
     });
 
-
-
     /* Change bacgkround on project section*/
     $('.project-box').on('mouseover',function(){
         var index = $('.project-box').index(this);
         $('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');
     });
-
 
     /* Carousel experience*/
     $('.carousel-experience').owlCarousel({
@@ -123,7 +114,6 @@
 	if ($('.js-ajax-form').length) {
 		$('.js-ajax-form').each(function(){
             let aux = $(this).attr('action');
-            console.log(aux);
 			$(this).validate({
 				errorClass: 'error',
 			    submitHandler: function(form){
