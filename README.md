@@ -1,5 +1,5 @@
 # Info
-This is the repository of my [Personal Website or Portfolio](https://diegoosvaldo.me/)
+This is the repository of my Personal Website or Portfolio
 
 
 ## Introduction
@@ -9,7 +9,7 @@ The website is a built with [Django](https://www.djangoproject.com/) and deploye
 
 ## Web site
 
-- [Acceder al sitio web](https://diegoosvaldo.me/)
+- [Access the website](https://diegoosvaldo.me/)
 
 
 ## Features
