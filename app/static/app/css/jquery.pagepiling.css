@@ -42,10 +42,10 @@ html, body {
     opacity: 1;
 }
 #pp-nav.right {
-    right: 17px;
+    right: 25px;
 }
 #pp-nav.left {
-    left: 17px;
+    left: 25px;
 }
 .pp-section.pp-table{
     display: table;
@@ -97,6 +97,7 @@ html, body {
 #pp-nav li .active span,
 .pp-slidesNav .active span {
     background: #d4f21b;
+    /*opacity: 0.2;*/
 }
 #pp-nav span,
 .pp-slidesNav span {
@@ -109,6 +110,7 @@ html, body {
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+    opacity: 0.3;
 }
 .pp-tooltip {
     position: absolute;
