@@ -24,6 +24,7 @@
 
         $('#pagepiling').pagepiling({
             scrollingSpeed: 280,
+            // Ocultar botones de navegacion de la derecha
             // navigation:false,
             menu: '.navbar-nav',
             anchors: ['home', 'about', 'experience', 'skills', 'contact'],
