@@ -129,13 +129,13 @@
 			            url: aux,
 			            data: $(form).serialize(),
                         crossDomain: true,
-                        dataType: 'jsonp',
+                        // dataType: 'jsonp',
 			            success: function() {
 		                	$('#success-message').show();
 		                },
 
 		                error: function(e){
-                            console.log(e);
+                            // console.log(e);
 		                	$('#error-message').show();
 			            }
 			        });
