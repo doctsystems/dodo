@@ -740,7 +740,8 @@ ion-icon{
   max-width: 320px;
 }
 .soft-skill {
-  padding-left: 2em;
+  padding: 1em;
+  float: left;
 }
 
 .nav-link{

@@ -4,10 +4,18 @@ from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.urls import reverse
+
+from skills.models import Skill
+
 # Create your views here.
 class Home(generic.TemplateView):
 	template_name = 'app/home.html'
 
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['hard_skills'] = Skill.objects.filter(type_skill='h')
+		context['soft_skills'] = Skill.objects.filter(type_skill='s')
+		return context
 
 def Contact(request):
 

@@ -20,6 +20,7 @@ INSTALLED_APPS = [
 
     #My apps
     'app',
+    'skills',
 
     #Other apps
     'corsheaders',
