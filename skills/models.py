@@ -25,3 +25,4 @@ class Skill(models.Model):
 	def save(self):
 		self.name=self.name.lower()
 		super(Skill, self).save()
+    
