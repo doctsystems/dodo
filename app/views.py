@@ -8,23 +8,26 @@ from django.urls import reverse
 from skills.models import Skill
 
 # Create your views here.
-class Home(generic.TemplateView):
-	template_name = 'app/home.html'
 
-	def get_context_data(self, **kwargs):
-		context = super().get_context_data(**kwargs)
-		context['hard_skills'] = Skill.objects.filter(type_skill='h')
-		context['soft_skills'] = Skill.objects.filter(type_skill='s')
-		return context
+
+class Home(generic.TemplateView):
+    template_name = 'app/home.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['hard_skills'] = Skill.objects.filter(type_skill='h')
+        context['soft_skills'] = Skill.objects.filter(type_skill='s')
+        return context
+
 
 def Contact(request):
 
-	if request.method == "POST":
-		name = request.POST.get('name', '')
-		_replyto = request.POST.get('_replyto', '')
-		content = request.POST.get('message', '')
+    if request.method == "POST":
+        name = request.POST.get('name', '')
+        _replyto = request.POST.get('_replyto', '')
+        content = request.POST.get('message', '')
 
-		email_body = """\
+        email_body = """\
 		    <html>
 				<head>
 					<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-=1">
@@ -46,7 +49,8 @@ def Contact(request):
 				</body>
 			</html>
 		    """ % (name, content, _replyto)
-		email = EmailMessage('A new email from diegoosvaldo.me', email_body, to=['d.cruz@outlook.com', 'info@diegoosvaldo.me'])
-		email.content_subtype = "html"
-		email.send()
-	return redirect(reverse('app:home'))
+        email = EmailMessage('A new email from diegoosvaldo.me', email_body, to=[
+                             'd.cruz@outlook.com', 'info@diegoosvaldo.me'])
+        email.content_subtype = "html"
+        email.send()
+    return redirect(reverse('app:home'))
