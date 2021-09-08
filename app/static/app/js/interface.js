@@ -47,14 +47,12 @@
                 $('#logo').attr('src', $('#logo').data('img1'));
 
                 // Para Cambiar el background del menu principal
-                // if ($('.home.active').hasClass('navbar-is-white')){
-                //     console.log('home activo');
-                //     $('#navbar-desctop').css("cssText", "background-color: none");
-                // }
-                // else{
-                //     console.log('home inactivo');
-                //     $('#navbar-desctop').css("cssText", "background-color: #160d1d;");
-                // }
+                if ($('.home.active').hasClass('navbar-is-white')){
+                    $('#navbar-desctop').css("cssText", "background-color: none");
+                }
+                else{
+                    $('#navbar-desctop').css("cssText", "background: rgb(68,45,74); background: linear-gradient(90deg, rgba(13,0,24,1) 0%, rgba(25,4,38,1) 45%, rgba(13,0,24,1) 100%);");
+                }
             }
             else{
                 $('.navbar-desctop').removeClass('navbar-white');
@@ -62,7 +60,6 @@
                 $('.navbar-bottom').removeClass('navbar-bottom-white');
                 // $('.logo').removeClass('logo-white');
                 $('#logo').attr('src', $('#logo').data('img2'));
-                console.log('entro al if no');
             }
         }
     }

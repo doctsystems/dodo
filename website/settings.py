@@ -1,5 +1,6 @@
 from pathlib import Path
 from decouple import Csv, config
+from dj_database_url import parse as db_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -65,7 +66,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+# DATABASES = {
+#     'default': config('DATABASE_URL', cast=db_url),
+# }
+# DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
 
 AUTH_PASSWORD_VALIDATORS = [
     {
