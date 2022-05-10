@@ -1,64 +1,40 @@
 {% load static %}
-
 <section id="skills" class="navbar-is-white text-white section pp-scrollable d-flex align-items-center position-absolute" style="background-image:url('{% static 'app/img/bg/bg.jpg'%}');">
-	<div class="intro">
-	  <div class="scroll-wrap">
-	  	<div class="container">
-	    	<div class="row align-items-center">
-	      	<div class="mt-lg-0 col-md-4 mb-3">
-		        <h2 class="text-white">Hard Skills</h2>
-		        <p>Here are a few things I've picked up along my life.</p>
-						<div class="pt-2">
-							<div class="row-partners row align-items-center ">
-								{% for item in hard_skills %}
-									<div class="col-partner col col-6 col-sm-4 col-md-4  col-xl-3">
-										<img class="{{ item.name }}" alt="" src="{{ item.avatar.thumbnail.url }}">
-									</div>
-								{% endfor %}
-							</div>
-						</div>
-	    		</div>
-	    		<div class="mt-lg-0 col-md-5 offset-md-2">
-	    			<h2 class="text-white">Soft Skills</h2>
-		        <p class="text-muted"><i>"Optimism is the faith that leads to success. Nothing can be done without hope and trust" </i>. Helen Keller.</p>
-		        <p>I am quite an optimistic person, I always try to see the positive side of things, I trust my qualities and I am not afraid of facing new challenges or changes that come my way.</p>
-		        <p>Qualities or defects:
-		        	<ul>
-		        		{% for item in soft_skills %}
-		        			<li>
-										<h5 class="text-white text-muted">
-											<i class="soft-skill">{{ item.name }}</i>
-										</h5>
-									</li>
-		        		{% endfor %}
-		        		<!-- <li>
-		        			<h5 class="text-white text-muted">
-		        				<i class="soft-skill">assertive</i>
-		        			</h5>
-		        		</li>
-		        		<li>
-		        			<h5 class="text-white text-muted">
-		        				<i class="soft-skill">trustworthy</i>
-		        			</h5>
-		        		</li>
-		        		<li><h5 class="text-white text-muted">
-		        			<i class="soft-skill">sociable</i>
-		        			<i class="soft-skill">teamwork</i>
-		        			<i class="soft-skill">creative</i>
-		        		</h5></li>
-		        		<li><h5 class="text-white text-muted">
-		        			<i class="soft-skill">assertive</i>
-		        			<i class="soft-skill">self-taught</i>
-		        			<i class="soft-skill">honest</i>
-		        		</h5></li>
-		        		<li><h5 class="text-white text-muted">
-		        			<i class="soft-skill">willingness to learn</i>
-		        		</h5></li> -->
-		        	</ul>
-		        </p>
-          </div>
-	    	</div>
-	   	</div>
-		</div>
-	</div>
+    <div class="intro">
+        <div class="scroll-wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="mt-lg-0 col-md-4 mb-3">
+                        <h2 class="text-white">Hard Skills</h2>
+                        <p>Here are a few things I've picked up along my life.</p>
+                        <div class="pt-2">
+                            <div class="row-partners row align-items-center ">
+                                {% for item in hard_skills %}
+                                <div class="col-partner col col-6 col-sm-4 col-md-4  col-xl-3">
+                                    <img class="{{ item.name }}" alt="" src="{{ item.avatar.thumbnail.url }}">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-lg-0 col-md-5 offset-md-2">
+                        <h2 class="text-white">Soft Skills</h2>
+                        <p class="text-muted"><i>"Optimism is the faith that leads to success. Nothing can be done without hope and trust" </i>. Helen Keller.</p>
+                        <p>I am quite an optimistic person, I always try to see the positive side of things, I trust my qualities and I am not afraid of facing new challenges or changes that come my way.</p>
+                        <p>Qualities or defects:
+                            <ul>
+                                {% for item in soft_skills %}
+                                <li>
+                                    <h5 class="text-white text-muted">
+                                        <i class="soft-skill">{{ item.name }}</i>
+                                    </h5>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
